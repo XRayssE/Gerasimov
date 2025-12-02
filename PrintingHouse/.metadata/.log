@@ -1,0 +1,133 @@
+!SESSION 2025-11-28 08:39:28.055 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-11-28 08:42:05.206
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-11-28 08:42:17.668
+!MESSAGE Logback config file: E:\!PrintingHouse\PrintingHouse\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.osgi 4 0 2025-11-28 08:42:18.111
+!MESSAGE Application error
+!STACK 1
+org.eclipse.swt.SWTError: No more handles
+	at org.eclipse.swt.SWT.error(SWT.java:4948)
+	at org.eclipse.swt.SWT.error(SWT.java:4837)
+	at org.eclipse.swt.SWT.error(SWT.java:4808)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:500)
+	at org.eclipse.swt.widgets.Control.createHandle(Control.java:675)
+	at org.eclipse.swt.widgets.Scrollable.createHandle(Scrollable.java:146)
+	at org.eclipse.swt.widgets.Composite.createHandle(Composite.java:300)
+	at org.eclipse.swt.widgets.Control.createWidget(Control.java:701)
+	at org.eclipse.swt.widgets.Scrollable.createWidget(Scrollable.java:161)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:121)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:85)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:103)
+	at org.eclipse.ui.splash.BasicSplashHandler.getBundleProgressMonitor(BasicSplashHandler.java:136)
+	at org.eclipse.ui.splash.BasicSplashHandler.getContent(BasicSplashHandler.java:222)
+	at org.eclipse.ui.internal.splash.EclipseSplashHandler.init(EclipseSplashHandler.java:99)
+	at org.eclipse.ui.internal.Workbench$3.run(Workbench.java:809)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.Workbench.createSplashWrapper(Workbench.java:823)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:607)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.oomph.p2.core 4 0 2025-11-28 08:42:18.233
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation.stop() of bundle org.eclipse.oomph.p2.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1071)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:392)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:695)
+	at org.eclipse.osgi.container.Module.stop(Module.java:554)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:2116)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1986)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:281)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:222)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:695)
+	at org.eclipse.osgi.container.Module.stop(Module.java:554)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:212)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:604)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProvisioningAgent(AgentImpl.java:702)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProfileRegistry(AgentImpl.java:346)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl$1.initializeFirstTime(AgentImpl.java:151)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:117)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.<init>(AgentImpl.java:198)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$2.createElement(AgentManagerImpl.java:125)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$2.createElement(AgentManagerImpl.java:1)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.addElement(PersistentMap.java:162)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.addAgent(AgentManagerImpl.java:266)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$2.initializeFirstTime(AgentManagerImpl.java:138)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:117)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:175)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:68)
+	at org.eclipse.oomph.p2.core.P2Util.getAgentManager(P2Util.java:100)
+	at org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation.stop(P2CorePlugin.java:177)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:903)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	... 13 more
+Caused by: java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.getProperty(String)" because the return value of "org.eclipse.equinox.internal.p2.artifact.repository.Activator.getContext()" is null
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.<clinit>(CachingRepositoryManager.java:571)
+	... 33 more
+Root exception:
+java.lang.ExceptionInInitializerError
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:604)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProvisioningAgent(AgentImpl.java:702)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProfileRegistry(AgentImpl.java:346)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl$1.initializeFirstTime(AgentImpl.java:151)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:117)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.<init>(AgentImpl.java:198)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$2.createElement(AgentManagerImpl.java:125)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$2.createElement(AgentManagerImpl.java:1)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.addElement(PersistentMap.java:162)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.addAgent(AgentManagerImpl.java:266)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$2.initializeFirstTime(AgentManagerImpl.java:138)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:117)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:175)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:68)
+	at org.eclipse.oomph.p2.core.P2Util.getAgentManager(P2Util.java:100)
+	at org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation.stop(P2CorePlugin.java:177)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:903)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1071)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:392)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:695)
+	at org.eclipse.osgi.container.Module.stop(Module.java:554)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:2116)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1986)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:281)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:222)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:695)
+	at org.eclipse.osgi.container.Module.stop(Module.java:554)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:212)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.getProperty(String)" because the return value of "org.eclipse.equinox.internal.p2.artifact.repository.Activator.getContext()" is null
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.<clinit>(CachingRepositoryManager.java:571)
+	... 33 more
